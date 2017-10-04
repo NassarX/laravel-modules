@@ -8,6 +8,7 @@ use Nwidart\Modules\Commands\ControllerMakeCommand;
 use Nwidart\Modules\Commands\DisableCommand;
 use Nwidart\Modules\Commands\DumpCommand;
 use Nwidart\Modules\Commands\EnableCommand;
+use Nwidart\Modules\Commands\EnumMakeCommand;
 use Nwidart\Modules\Commands\EventMakeCommand;
 use Nwidart\Modules\Commands\FactoryMakeCommand;
 use Nwidart\Modules\Commands\InstallCommand;
@@ -25,6 +26,7 @@ use Nwidart\Modules\Commands\ModelMakeCommand;
 use Nwidart\Modules\Commands\ModuleMakeCommand;
 use Nwidart\Modules\Commands\NotificationMakeCommand;
 use Nwidart\Modules\Commands\PolicyMakeCommand;
+use Nwidart\Modules\Commands\PresenterMakeCommand;
 use Nwidart\Modules\Commands\ProviderMakeCommand;
 use Nwidart\Modules\Commands\PublishCommand;
 use Nwidart\Modules\Commands\PublishConfigurationCommand;
@@ -34,10 +36,12 @@ use Nwidart\Modules\Commands\RequestMakeCommand;
 use Nwidart\Modules\Commands\ResourceMakeCommand;
 use Nwidart\Modules\Commands\RouteProviderMakeCommand;
 use Nwidart\Modules\Commands\RuleMakeCommand;
+use Nwidart\Modules\Commands\ScopeMakeCommand;
 use Nwidart\Modules\Commands\SeedCommand;
 use Nwidart\Modules\Commands\SeedMakeCommand;
 use Nwidart\Modules\Commands\SetupCommand;
 use Nwidart\Modules\Commands\TestMakeCommand;
+use Nwidart\Modules\Commands\TraitMakeCommand;
 use Nwidart\Modules\Commands\UnUseCommand;
 use Nwidart\Modules\Commands\UpdateCommand;
 use Nwidart\Modules\Commands\UseCommand;
@@ -57,6 +61,7 @@ class ConsoleServiceProvider extends ServiceProvider
         DisableCommand::class,
         DumpCommand::class,
         EnableCommand::class,
+        EnumMakeCommand::class,
         EventMakeCommand::class,
         JobMakeCommand::class,
         ListenerMakeCommand::class,
@@ -78,10 +83,12 @@ class ConsoleServiceProvider extends ServiceProvider
         MigrateRollbackCommand::class,
         MigrationMakeCommand::class,
         ModelMakeCommand::class,
+        PresenterMakeCommand::class,
         PublishCommand::class,
         PublishConfigurationCommand::class,
         PublishMigrationCommand::class,
         PublishTranslationCommand::class,
+        ScopeMakeCommand::class,
         SeedCommand::class,
         SeedMakeCommand::class,
         SetupCommand::class,
@@ -90,6 +97,7 @@ class ConsoleServiceProvider extends ServiceProvider
         UseCommand::class,
         ResourceMakeCommand::class,
         TestMakeCommand::class,
+        TraitMakeCommand::class,
     ];
 
     /**
