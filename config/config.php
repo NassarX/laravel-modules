@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'namespace' => 'Modules',
+    'namespace' => 'MobileDoctors',
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
         |
         */
 
-        'modules' => base_path('Modules'),
+        'modules' => base_path('MobileDoctors'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path
@@ -75,7 +75,7 @@ return [
         |
         */
 
-        'assets' => public_path('modules'),
+        'assets' => public_path('mobile-doctors'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
@@ -150,10 +150,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nassar',
+        'vendor' => 'mobile-doctors',
         'author' => [
-            'name' => 'Mahmoud Nassar',
-            'email' => 'm.hamdy1994@gmail.com',
+            'name' => 'Mobile Doctors',
+            'email' => 'info@mobiledoctors24-7.com',
         ],
     ],
     /*
