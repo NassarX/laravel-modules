@@ -269,6 +269,8 @@ class ModuleGenerator extends Generator
         }
 
         $this->console->info("Module [{$name}] created successfully.");
+
+        passthru('composer dump -o -n -q');
     }
 
     /**

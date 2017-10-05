@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'namespace' => 'Modules',
+    'namespace' => 'MobileDoctors',
 
     /*
     |--------------------------------------------------------------------------
@@ -27,15 +27,19 @@ return [
         'path' => base_path() . '/vendor/nwidart/laravel-modules/src/Commands/stubs',
         'files' => [
             'start' => 'start.php',
-            'routes' => 'Http/routes.php',
-            'views/index' => 'Resources/views/index.blade.php',
-            'views/master' => 'Resources/views/layouts/master.blade.php',
-            'scaffold/config' => 'Config/config.php',
+            'routes' => 'routes/web.php',
+            'api-routes' => 'routes/api.php',
+            'console-routes' => 'routes/console.php',
+            'channels-routes' => 'routes/channels.php',
+            'views/index' => 'resources/views/index.blade.php',
+            'views/master' => 'resources/views/layouts/master.blade.php',
+            'scaffold/config' => 'config/config.php',
             'composer' => 'composer.json',
         ],
         'replacements' => [
             'start' => ['LOWER_NAME', 'ROUTES_LOCATION'],
             'routes' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
+            'api-routes' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
             'json' => ['LOWER_NAME', 'STUDLY_NAME', 'MODULE_NAMESPACE'],
             'views/index' => ['LOWER_NAME'],
             'views/master' => ['STUDLY_NAME'],
@@ -61,7 +65,7 @@ return [
         |
         */
 
-        'modules' => base_path('Modules'),
+        'modules' => base_path('MobileDoctors'),
         /*
         |--------------------------------------------------------------------------
         | Modules assets path
@@ -71,7 +75,7 @@ return [
         |
         */
 
-        'assets' => public_path('modules'),
+        'assets' => public_path('mobile-doctors'),
         /*
         |--------------------------------------------------------------------------
         | The migrations path
@@ -91,29 +95,33 @@ return [
         | Se the generate key to false to not generate that folder
         */
         'generator' => [
-            'config' => ['path' => 'Config', 'generate' => true],
-            'command' => ['path' => 'Console', 'generate' => true],
-            'migration' => ['path' => 'Database/Migrations', 'generate' => true],
-            'seeder' => ['path' => 'Database/Seeders', 'generate' => true],
-            'factory' => ['path' => 'Database/factories', 'generate' => true],
-            'model' => ['path' => 'Entities', 'generate' => true],
-            'controller' => ['path' => 'Http/Controllers', 'generate' => true],
-            'filter' => ['path' => 'Http/Middleware', 'generate' => true],
-            'request' => ['path' => 'Http/Requests', 'generate' => true],
-            'provider' => ['path' => 'Providers', 'generate' => true],
-            'assets' => ['path' => 'Resources/assets', 'generate' => true],
-            'lang' => ['path' => 'Resources/lang', 'generate' => true],
-            'views' => ['path' => 'Resources/views', 'generate' => true],
-            'test' => ['path' => 'Tests', 'generate' => true],
-            'repository' => ['path' => 'Repositories', 'generate' => false],
-            'event' => ['path' => 'Events', 'generate' => false],
-            'listener' => ['path' => 'Listeners', 'generate' => false],
-            'policies' => ['path' => 'Policies', 'generate' => false],
-            'rules' => ['path' => 'Rules', 'generate' => false],
-            'jobs' => ['path' => 'Jobs', 'generate' => false],
-            'emails' => ['path' => 'Emails', 'generate' => false],
-            'notifications' => ['path' => 'Notifications', 'generate' => false],
-            'resource' => ['path' => 'Transformers', 'generate' => false],
+            'config' => ['path' => 'config', 'generate' => true],
+            'command' => ['path' => 'console', 'generate' => false],
+            'migration' => ['path' => 'database/migrations', 'generate' => true],
+            'seeder' => ['path' => 'database/seeders', 'generate' => true],
+            'factory' => ['path' => 'database/factories', 'generate' => false],
+            'model' => ['path' => 'src/Models', 'generate' => true],
+            'scope' => ['path' => 'src/Models/Scopes', 'generate' => true],
+            'trait' => ['path' => 'src/Models/Traits', 'generate' => true],
+            'presenter' => ['path' => 'src/Models/Presenters', 'generate' => true],
+            'enum' => ['path' => 'src/Models/Enums', 'generate' => true],
+            'resource' => ['path' => 'src/Models/Transformers', 'generate' => true],
+            'controller' => ['path' => 'src/Http/Controllers', 'generate' => true],
+            'filter' => ['path' => 'src/Http/Middleware', 'generate' => true],
+            'request' => ['path' => 'src/Http/Requests', 'generate' => true],
+            'provider' => ['path' => 'src/Providers', 'generate' => true],
+            'assets' => ['path' => 'resources/assets', 'generate' => false],
+            'lang' => ['path' => 'resources/lang', 'generate' => true],
+            'views' => ['path' => 'resources/views', 'generate' => true],
+            'test' => ['path' => 'tests', 'generate' => false],
+            'repository' => ['path' => 'src/Repositories', 'generate' => true],
+            'event' => ['path' => 'src/Events', 'generate' => false],
+            'listener' => ['path' => 'src/Listeners', 'generate' => false],
+            'policies' => ['path' => 'src/Policies', 'generate' => false],
+            'rules' => ['path' => 'src/Rules', 'generate' => false],
+            'jobs' => ['path' => 'src/Jobs', 'generate' => false],
+            'emails' => ['path' => 'src/Emails', 'generate' => false],
+            'notifications' => ['path' => 'src/Notifications', 'generate' => true]
         ],
     ],
     /*
@@ -142,10 +150,10 @@ return [
     */
 
     'composer' => [
-        'vendor' => 'nwidart',
+        'vendor' => 'mobile-doctors',
         'author' => [
-            'name' => 'Nicolas Widart',
-            'email' => 'n.widart@gmail.com',
+            'name' => 'Mobile Doctors',
+            'email' => 'info@mobiledoctors24-7.com',
         ],
     ],
     /*
