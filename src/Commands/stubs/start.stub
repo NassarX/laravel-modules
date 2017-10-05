@@ -13,5 +13,7 @@
 */
 
 if (!app()->routesAreCached()) {
-    require __DIR__ . '$ROUTES_LOCATION$';
+    foreach(glob(dirname(__DIR__ . '$ROUTES_LOCATION$').'/*.php') as $route) {
+            require $route;
+    }
 }
