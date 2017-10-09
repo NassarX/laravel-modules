@@ -103,11 +103,11 @@ return [
             'model' => ['path' => 'src/Models', 'generate' => true],
             'scope' => ['path' => 'src/Models/Scopes', 'generate' => true],
             'trait' => ['path' => 'src/Models/Traits', 'generate' => true],
-            'presenter' => ['path' => 'src/Models/Presenters', 'generate' => true],
+            'presenter' => ['path' => 'src/Models/Presenters', 'generate' => false],
             'enum' => ['path' => 'src/Models/Enums', 'generate' => true],
             'resource' => ['path' => 'src/Models/Transformers', 'generate' => true],
             'controller' => ['path' => 'src/Http/Controllers', 'generate' => true],
-            'filter' => ['path' => 'src/Http/Middleware', 'generate' => true],
+            'filter' => ['path' => 'src/Http/Middleware', 'generate' => false],
             'request' => ['path' => 'src/Http/Requests', 'generate' => true],
             'provider' => ['path' => 'src/Providers', 'generate' => true],
             'assets' => ['path' => 'resources/assets', 'generate' => false],
@@ -121,7 +121,7 @@ return [
             'rules' => ['path' => 'src/Rules', 'generate' => false],
             'jobs' => ['path' => 'src/Jobs', 'generate' => false],
             'emails' => ['path' => 'src/Emails', 'generate' => false],
-            'notifications' => ['path' => 'src/Notifications', 'generate' => true]
+            'notifications' => ['path' => 'src/Notifications', 'generate' => false]
         ],
     ],
     /*
