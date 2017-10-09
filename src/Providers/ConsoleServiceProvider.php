@@ -61,7 +61,6 @@ class ConsoleServiceProvider extends ServiceProvider
         DisableCommand::class,
         DumpCommand::class,
         EnableCommand::class,
-        EnumMakeCommand::class,
         EventMakeCommand::class,
         JobMakeCommand::class,
         ListenerMakeCommand::class,
@@ -83,12 +82,10 @@ class ConsoleServiceProvider extends ServiceProvider
         MigrateRollbackCommand::class,
         MigrationMakeCommand::class,
         ModelMakeCommand::class,
-        PresenterMakeCommand::class,
         PublishCommand::class,
         PublishConfigurationCommand::class,
         PublishMigrationCommand::class,
         PublishTranslationCommand::class,
-        ScopeMakeCommand::class,
         SeedCommand::class,
         SeedMakeCommand::class,
         SetupCommand::class,
@@ -97,7 +94,6 @@ class ConsoleServiceProvider extends ServiceProvider
         UseCommand::class,
         ResourceMakeCommand::class,
         TestMakeCommand::class,
-        TraitMakeCommand::class,
     ];
 
     /**
