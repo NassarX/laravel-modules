@@ -21,6 +21,7 @@ use Nwidart\Modules\Commands\MigrateCommand;
 use Nwidart\Modules\Commands\MigrateRefreshCommand;
 use Nwidart\Modules\Commands\MigrateResetCommand;
 use Nwidart\Modules\Commands\MigrateRollbackCommand;
+use Nwidart\Modules\Commands\MigrateStatusCommand;
 use Nwidart\Modules\Commands\MigrationMakeCommand;
 use Nwidart\Modules\Commands\ModelMakeCommand;
 use Nwidart\Modules\Commands\ModuleMakeCommand;
@@ -80,6 +81,7 @@ class ConsoleServiceProvider extends ServiceProvider
         MigrateRefreshCommand::class,
         MigrateResetCommand::class,
         MigrateRollbackCommand::class,
+        MigrateStatusCommand::class,
         MigrationMakeCommand::class,
         ModelMakeCommand::class,
         PublishCommand::class,
