@@ -53,6 +53,7 @@ return [
                 'MODULE_NAMESPACE',
             ],
         ],
+        'gitkeep' => true,
     ],
     'paths' => [
         /*
@@ -178,5 +179,13 @@ return [
     */
     'register' => [
         'translations' => true,
+        /**
+         * load files on boot or register method
+         *
+         * Note: boot not compatible with asgardcms
+         *
+         * @example boot|register
+         */
+        'files' => 'register',
     ],
 ];
